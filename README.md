@@ -61,7 +61,10 @@ chmod 666 /opt/palworld/export/*.ini
 ```
 Download this repository and navigate into the cloned directory
 ```shell
-git clone https://github.com/gilltrick/palworlddocker.git \
+git clone https://github.com/gilltrick/palworlddocker.git
+```
+Change directory
+```shell
 cd palworlddocker
 ```
 Edit the the config for the Dashboard
