@@ -2,6 +2,13 @@
 
 ![Dashboard](https://github.com/gilltrick/palworlddocker/blob/main/palsp/website/static/image/dashboard.png?raw=true)
 
+## About
+Goal of the application is to offer an easy way to run a dedicated PalWorld Server and also manage it.
+The Dashboard is simple but offers all you need. You can edit the server configuration and update your server. As soon as the game offers more there will be updates.
+A backup system is running in the background saving the world and palyer data to persistent storage on your machine.
+You can create or apply a backup with one click in seconds. And if something went wrong you restart the container, the backup gets loaded and your are ready to go again.
+Run it and forgett it.
+
 ## Getting started
 
 ### You can also follow this video where I use this repository to setup the application
