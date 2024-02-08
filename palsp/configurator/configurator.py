@@ -40,6 +40,8 @@ class Configurator:
             lines = []
             with open(self.path, "r", encoding="utf-8") as fp:
                 lines = fp.readlines()
+            if len(lines) < 2:
+                return {}
             cvs = re.sub("\(|\)", "", re.search("(\(.*\))", lines[1]).group(1))
             kv_pairs = cvs.split(",")
             myobj = {}
