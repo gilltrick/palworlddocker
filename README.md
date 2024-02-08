@@ -1,6 +1,6 @@
 # PalWordDocker
 
-![Dashboard](https://git.gilltrick.com/Gilltrick/palworddocker/-/raw/main/palsp/website/static/image/dashboard.png)
+![Dashboard](https://github.com/gilltrick/palworlddocker/blob/main/palsp/website/static/image/dashboard.png?raw=true)
 
 ## Getting started
 
