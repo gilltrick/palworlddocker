@@ -45,10 +45,6 @@ Change permission for the steam user inside the docker container to backup world
 ```shell
 chmod 777 /opt/palworld/export/backup/*
 ```
-Change permission for the steam user inside the docker container to update server config
-```shell
-chmod 666 /opt/palworld/export/*.ini
-```
 Create the PalWorldSettings.ini file that hold the configuration data
 ```shell
 nano /opt/palworld/export/PalWorldSettings.ini
@@ -59,9 +55,13 @@ You should at least change the value for the PublicIP
 [/Script/Pal.PalGameWorldSettings]
 OptionSettings=(Difficulty=None,DayTimeSpeedRate=1.000000,NightTimeSpeedRate=2.000000,ExpRate=1.500000,PalCaptureRate=1.000000,PalSpawnNumRate=1.000000,PalDamageRateAttack=1.000000,PalDamageRateDefense=1.000000,PlayerDamageRateAttack=1.000000,PlayerDamageRateDefense=1.000000,PlayerStomachDecreaceRate=1.000000,PlayerStaminaDecreaceRate=1.000000,PlayerAutoHPRegeneRate=2.000000,PlayerAutoHpRegeneRateInSleep=4.000000,PalStomachDecreaceRate=0.500000,PalStaminaDecreaceRate=0.500000,PalAutoHPRegeneRate=2.000000,PalAutoHpRegeneRateInSleep=4.000000,BuildObjectDamageRate=1.000000,BuildObjectDeteriorationDamageRate=1.000000,CollectionDropRate=1.000000,CollectionObjectHpRate=1.000000,CollectionObjectRespawnSpeedRate=1.000000,EnemyDropItemRate=1.000000,DeathPenalty=1,bEnablePlayerToPlayerDamage=False,bEnableFriendlyFire=False,bEnableInvaderEnemy=True,bActiveUNKO=False,bEnableAimAssistPad=False,bEnableAimAssistKeyboard=False,DropItemMaxNum=3000,DropItemMaxNum_UNKO=100,BaseCampMaxNum=128,BaseCampWorkerMaxNum=15,DropItemAliveMaxHours=1.000000,bAutoResetGuildNoOnlinePlayers=False,AutoResetGuildTimeNoOnlinePlayers=72.000000,GuildPlayerMaxNum=32,PalEggDefaultHatchingTime=0.000000,WorkSpeedRate=1.000000,bIsMultiplay=True,bIsPvP=True,bCanPickupOtherGuildDeathPenaltyDrop=True,bEnableNonLoginPenalty=True,bEnableFastTravel=True,bIsStartLocationSelectByMap=True,bExistPlayerAfterLogout=False,bEnableDefenseOtherGuildPlayer=True,CoopPlayerMaxNum=12,ServerPlayerMaxNum=256,ServerName="Palworld",ServerDescription="This is a virtual World where we try to live without killing",AdminPassword="secret",ServerPassword="",PublicPort=8211,PublicIP="127.0.0.1",RCONEnabled=False,RCONPort=25575,Region="EU",bUseAuth=True,BanListURL="https://api.palworldgame.com/api/banlist.txt")
 ```
+Change permission for the steam user inside the docker container to update server config
+```shell
+chmod 666 /opt/palworld/export/*.ini
+```
 Download this repository and navigate into the cloned directory
 ```shell
-git clone https://git.gilltrick.com/gilltrick/palworlddocker.git \
+git clone https://github.com/gilltrick/palworlddocker.git \
 cd palworlddocker
 ```
 Edit the the config for the Dashboard
