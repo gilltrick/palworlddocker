@@ -1,0 +1,298 @@
+@font-face {
+    font-family: Nexa;
+    src: url(./../fonts/Nexa-Heavy.ttf);
+}
+
+
+html body{
+    padding:0px;
+    margin:0px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: start;
+    background-image: url("./../image/background.png");
+    background-size: cover;
+}
+
+.navbar{
+
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+}
+
+.navbar .logo{
+
+    width: 10%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbar .logo img{
+
+    width: 88%;
+    height: 88%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbar .title_text{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89%;
+    height: 100%;
+    color:white;
+    font-size: 54px;
+    font-family: "Nexa";
+}
+
+.navbar a{
+
+    border: 2px solid rgb(74, 226, 54);
+    border-radius: 3px;
+    background-color: black;
+    color: wheat;
+    font-size: 20px;
+    margin: 0.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 10%;
+    height: 80%;
+    font-family: "Nexa";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar .green{
+
+    border: 2px solid rgb(55, 197, 55);
+    background-color: rgb(41, 40, 40);
+}
+
+.controllsContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2%;
+
+}
+
+.controllsContainer a{
+
+    border: 2px solid orange;
+    border-radius: 3px;
+    background-color: black;
+    color: wheat;
+    font-size: 20px;
+    margin: 0.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 10%;
+    height: 40%;
+    font-family: "Nexa";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.controllsContainer .green{
+
+    border: 2px solid rgb(55, 197, 55);
+    background-color: rgb(41, 40, 40);
+}
+.controllsContainer .green:hover{
+
+    border: 2px solid rgb(26, 241, 26);
+    background-color: rgb(38, 75, 47);
+}
+.controllsContainer .red{
+
+    border: 2px solid rgb(236, 66, 103);
+    background-color: rgb(41, 40, 40);
+}
+.controllsContainer .red:hover{
+
+    border: 2px solid rgb(248, 19, 69);
+    background-color: rgb(121, 69, 69);
+}
+.controllsContainer .yellow{
+
+    border: 2px solid rgb(174, 204, 63);
+    background-color: rgb(41, 40, 40);
+}
+.controllsContainer .yellow:hover{
+
+    border: 2px solid rgb(195, 247, 9);
+    background-color: rgb(124, 120, 55);
+}
+
+.settingContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    width: 90%;
+    height: 60%;
+    margin-left:5%;
+    font-family: "Nexa";
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+form .kv_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: start;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+form button{
+
+    border: 2px solid rgb(0, 255, 136);
+    border-radius: 3px;
+    background-color: black;
+    color: wheat;
+    font-size: 22px;
+    margin: 0.5%;
+
+    margin-left: 5%;
+    margin-right: 0%;
+    margin-left: 19.5%;
+    width: 77.5%;
+    height: 10%;
+    font-family: "Nexa";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center; 
+}
+
+form button:hover{
+
+    border: 2px solid rgb(22, 197, 250);
+    background-color: rgb(46, 168, 184);
+}
+
+form .kv_container .key{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: center;
+    width: 21%;
+    height: 10%;
+    color:white;
+}
+
+form .kv_container .value{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 78%;
+    height: 10%;
+    font-family: "Nexa";
+}
+
+
+@media (max-width:1080px){
+
+    form .kv_container .key{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-content: center;
+        width: 38%;
+        height: 10%;
+        color:white;
+    }
+    
+    form .kv_container .value{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 61%;
+        height: 10%;
+        font-family: "Nexa";
+    }
+
+    .navbar{
+
+        height: 6%;
+    }
+
+    form button{
+
+        border: 2px solid rgb(0, 255, 136);
+        border-radius: 3px;
+        background-color: black;
+        color: wheat;
+        font-size: 22px;
+        margin: 0.5%;
+    
+        margin-left: 5%;
+        margin-right: 0%;
+        margin-left: 35.5%;
+        width: 60%;
+        height: 10%;
+        font-family: "Nexa";
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center; 
+    }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eee9e9;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6693d6;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5793ee;
+  }

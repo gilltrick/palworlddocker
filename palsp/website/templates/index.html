@@ -1,0 +1,219 @@
+<html style="background-color: black;">
+    <head>
+        <title>PalSP</title>
+        <link rel="stylesheet" href="./../static/css/style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./../static/image/Logo.png">
+            </div>
+            <div class="title_text">Palworld Server Manager</div>
+            <a href="/login" class="red">Login</a>
+        </div>
+        <div class="controllsContainer">
+            <a href="/do?cmd=start" class="green">START</a>
+            <a href="/do?cmd=stop" class="red">STOP</a>
+            <a href="/do?cmd=restart" class="yellow">RESTART</a>
+            <a href="/do?cmd=create_backup" class="red">CREATE BACKUP</a>
+            <a href="/do?cmd=applay_backup" class="yellow">APPLY BACKUP</a>
+            <a href="/do?cmd=update_server" class="yellow">UPDATE SERVER</a>
+        </div>
+        {% if palworld_server_settings|length > 0 %}
+        <div class="settingContainer">
+            <form action="/updateConfig" method="post">
+                <div class="kv_container">
+
+                    <div class="key">Difficulty</div>
+                    <input class="value" value="{{palworld_server_settings['Difficulty']}}" name="Difficulty">
+
+                    <div class="key">DayTimeSpeedRate</div>
+                    <input class="value" value="{{palworld_server_settings['DayTimeSpeedRate']}}" name="DayTimeSpeedRate">
+
+                    <div class="key">NightTimeSpeedRate</div>
+                    <input class="value" value="{{palworld_server_settings['NightTimeSpeedRate']}}" name="NightTimeSpeedRate">
+                    
+                    <div class="key">ExpRate</div>
+                    <input class="value" value="{{palworld_server_settings['ExpRate']}}" name="ExpRate">      
+
+                    <div class="key">PalCaptureRate</div>
+                    <input class="value" value="{{palworld_server_settings['PalCaptureRate']}}" name="PalCaptureRate">
+
+                    <div class="key">PalSpawnNumRate</div>
+                    <input class="value" value="{{palworld_server_settings['PalSpawnNumRate']}}" name="PalSpawnNumRate">
+
+                    <div class="key">PalDamageRateAttack</div>
+                    <input class="value" value="{{palworld_server_settings['PalDamageRateAttack']}}" name="PalDamageRateAttack">
+                    
+                    <div class="key">PalDamageRateDefense</div>
+                    <input class="value" value="{{palworld_server_settings['PalDamageRateDefense']}}" name="PalDamageRateDefense">
+
+                    <div class="key">PlayerDamageRateAttack</div>
+                    <input class="value" value="{{palworld_server_settings['PlayerDamageRateAttack']}}" name="PlayerDamageRateAttack">
+
+                    <div class="key">PlayerDamageRateDefense</div>
+                    <input class="value" value="{{palworld_server_settings['PlayerDamageRateDefense']}}" name="PlayerDamageRateDefense">
+
+                    <div class="key">PlayerStomachDecreaceRate</div>
+                    <input class="value" value="{{palworld_server_settings['PlayerStomachDecreaceRate']}}" name="PlayerStomachDecreaceRate">
+                    
+                    <div class="key">PlayerStaminaDecreaceRate</div>
+                    <input class="value" value="{{palworld_server_settings['PlayerStaminaDecreaceRate']}}" name="PlayerStaminaDecreaceRate">
+
+                    <div class="key">PlayerAutoHPRegeneRate</div>
+                    <input class="value" value="{{palworld_server_settings['PlayerAutoHPRegeneRate']}}" name="PlayerAutoHPRegeneRate">
+
+                    <div class="key">PlayerAutoHpRegeneRateInSleep</div>
+                    <input class="value" value="{{palworld_server_settings['PlayerAutoHpRegeneRateInSleep']}}" name="PlayerAutoHpRegeneRateInSleep">
+
+                    <div class="key">PalStomachDecreaceRate</div>
+                    <input class="value" value="{{palworld_server_settings['PalStomachDecreaceRate']}}" name="PalStomachDecreaceRate">
+                    
+                    <div class="key">PalStaminaDecreaceRate</div>
+                    <input class="value" value="{{palworld_server_settings['PalStaminaDecreaceRate']}}" name="PalStaminaDecreaceRate">
+
+                    <div class="key">PalAutoHPRegeneRate</div>
+                    <input class="value" value="{{palworld_server_settings['PalAutoHPRegeneRate']}}" name="PalAutoHPRegeneRate">
+
+                    <div class="key">PalAutoHpRegeneRateInSleep</div>
+                    <input class="value" value="{{palworld_server_settings['PalAutoHpRegeneRateInSleep']}}" name="PalAutoHpRegeneRateInSleep">
+
+                    <div class="key">BuildObjectDamageRate</div>
+                    <input class="value" value="{{palworld_server_settings['BuildObjectDamageRate']}}" name="BuildObjectDamageRate">
+                    
+                    <div class="key">BuildObjectDeteriorationDamageRate</div>
+                    <input class="value" value="{{palworld_server_settings['BuildObjectDeteriorationDamageRate']}}" name="BuildObjectDeteriorationDamageRate">
+
+                    <div class="key">CollectionDropRate</div>
+                    <input class="value" value="{{palworld_server_settings['CollectionDropRate']}}" name="CollectionDropRate">
+
+                    <div class="key">CollectionObjectHpRate</div>
+                    <input class="value" value="{{palworld_server_settings['CollectionObjectHpRate']}}" name="CollectionObjectHpRate">
+
+                    <div class="key">CollectionObjectRespawnSpeedRate</div>
+                    <input class="value" value="{{palworld_server_settings['CollectionObjectRespawnSpeedRate']}}" name="CollectionObjectRespawnSpeedRate">
+                    
+                    <div class="key">EnemyDropItemRate</div>
+                    <input class="value" value="{{palworld_server_settings['EnemyDropItemRate']}}" name="EnemyDropItemRate">
+
+                    <div class="key">DeathPenalty</div>
+                    <input class="value" value="{{palworld_server_settings['DeathPenalty']}}" name="DeathPenalty">
+
+                    <div class="key">bEnablePlayerToPlayerDamage</div>
+                    <input class="value" value="{{palworld_server_settings['bEnablePlayerToPlayerDamage']}}" name="bEnablePlayerToPlayerDamage">
+
+                    <div class="key">bEnableFriendlyFire</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableFriendlyFire']}}" name="bEnableFriendlyFire">
+                    
+                    <div class="key">bEnableInvaderEnemy</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableInvaderEnemy']}}" name="bEnableInvaderEnemy">
+
+                    <div class="key">bActiveUNKO</div>
+                    <input class="value" value="{{palworld_server_settings['bActiveUNKO']}}" name="bActiveUNKO">
+
+                    <div class="key">bEnableAimAssistPad</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableAimAssistPad']}}" name="bEnableAimAssistPad">
+
+                    <div class="key">bEnableAimAssistKeyboard</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableAimAssistKeyboard']}}" name="bEnableAimAssistKeyboard">
+                    
+                    <div class="key">DropItemMaxNum</div>
+                    <input class="value" value="{{palworld_server_settings['DropItemMaxNum']}}" name="DropItemMaxNum">
+
+                    <div class="key">DropItemMaxNum_UNKO</div>
+                    <input class="value" value="{{palworld_server_settings['DropItemMaxNum_UNKO']}}" name="DropItemMaxNum_UNKO">
+
+                    <div class="key">BaseCampMaxNum</div>
+                    <input class="value" value="{{palworld_server_settings['BaseCampMaxNum']}}" name="BaseCampMaxNum">
+
+                    <div class="key">BaseCampWorkerMaxNum</div>
+                    <input class="value" value="{{palworld_server_settings['BaseCampWorkerMaxNum']}}" name="BaseCampWorkerMaxNum">
+                    
+                    <div class="key">DropItemAliveMaxHours</div>
+                    <input class="value" value="{{palworld_server_settings['DropItemAliveMaxHours']}}" name="DropItemAliveMaxHours">
+
+                    <div class="key">bAutoResetGuildNoOnlinePlayers</div>
+                    <input class="value" value="{{palworld_server_settings['bAutoResetGuildNoOnlinePlayers']}}" name="bAutoResetGuildNoOnlinePlayers">
+
+                    <div class="key">AutoResetGuildTimeNoOnlinePlayers</div>
+                    <input class="value" value="{{palworld_server_settings['AutoResetGuildTimeNoOnlinePlayers']}}" name="AutoResetGuildTimeNoOnlinePlayers">
+
+                    <div class="key">GuildPlayerMaxNum</div>
+                    <input class="value" value="{{palworld_server_settings['GuildPlayerMaxNum']}}" name="GuildPlayerMaxNum">
+                    
+                    <div class="key">PalEggDefaultHatchingTime</div>
+                    <input class="value" value="{{palworld_server_settings['PalEggDefaultHatchingTime']}}" name="PalEggDefaultHatchingTime">
+
+                    <div class="key">WorkSpeedRate</div>
+                    <input class="value" value="{{palworld_server_settings['WorkSpeedRate']}}" name="WorkSpeedRate">
+
+                    <div class="key">bIsMultiplay</div>
+                    <input class="value" value="{{palworld_server_settings['bIsMultiplay']}}" name="bIsMultiplay">
+
+                    <div class="key">bIsPvP</div>
+                    <input class="value" value="{{palworld_server_settings['bIsPvP']}}" name="bIsPvP">
+                    
+                    <div class="key">bCanPickupOtherGuildDeathPenaltyDrop</div>
+                    <input class="value" value="{{palworld_server_settings['bCanPickupOtherGuildDeathPenaltyDrop']}}" name="bCanPickupOtherGuildDeathPenaltyDrop">
+
+                    <div class="key">bEnableNonLoginPenalty</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableNonLoginPenalty']}}" name="bEnableNonLoginPenalty">
+
+                    <div class="key">bEnableFastTravel</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableFastTravel']}}" name="bEnableFastTravel">
+
+                    <div class="key">bIsStartLocationSelectByMap</div>
+                    <input class="value" value="{{palworld_server_settings['bIsStartLocationSelectByMap']}}" name="bIsStartLocationSelectByMap">
+                    
+                    <div class="key">bExistPlayerAfterLogout</div>
+                    <input class="value" value="{{palworld_server_settings['bExistPlayerAfterLogout']}}" name="bExistPlayerAfterLogout">
+
+                    <div class="key">bEnableDefenseOtherGuildPlayer</div>
+                    <input class="value" value="{{palworld_server_settings['bEnableDefenseOtherGuildPlayer']}}" name="bEnableDefenseOtherGuildPlayer">
+
+                    <div class="key">CoopPlayerMaxNum</div>
+                    <input class="value" value="{{palworld_server_settings['CoopPlayerMaxNum']}}" name="CoopPlayerMaxNum">
+
+                    <div class="key">ServerPlayerMaxNum</div>
+                    <input class="value" value="{{palworld_server_settings['ServerPlayerMaxNum']}}" name="ServerPlayerMaxNum">
+                    
+                    <div class="key">ServerName</div>
+                    <input class="value" value="{{palworld_server_settings['ServerName']}}" name="ServerName">
+
+                    <div class="key">ServerDescription</div>
+                    <input class="value" value="{{palworld_server_settings['ServerDescription']}}" name="ServerDescription">
+
+                    <div class="key">AdminPassword</div>
+                    <input class="value" value="{{palworld_server_settings['AdminPassword']}}" name="AdminPassword">
+
+                    <div class="key">ServerPassword</div>
+                    <input class="value" value="{{palworld_server_settings['ServerPassword']}}" name="ServerPassword">
+                    
+                    <div class="key">PublicPort</div>
+                    <input class="value" value="{{palworld_server_settings['PublicPort']}}" name="PublicPort">
+
+                    <div class="key">PublicIP</div>
+                    <input class="value" value="{{palworld_server_settings['PublicIP']}}" name="PublicIP">
+
+                    <div class="key">RCONEnabled</div>
+                    <input class="value" value="{{palworld_server_settings['RCONEnabled']}}" name="RCONEnabled">
+
+                    <div class="key">RCONPort</div>
+                    <input class="value" value="{{palworld_server_settings['RCONPort']}}" name="RCONPort">
+                    
+                    <div class="key">Region</div>
+                    <input class="value" value="{{palworld_server_settings['Region']}}" name="Region">
+
+                    <div class="key">bUseAuth</div>
+                    <input class="value" value="{{palworld_server_settings['bUseAuth']}}" name="bUseAuth">
+                    
+                    <div class="key">BanListURL</div>
+                    <input class="value" value="{{palworld_server_settings['BanListURL']}}" name="BanListURL">
+
+                </div>
+                <button type="submit" class="green">SAVE CHANGES</button>
+            </form>
+        </div>
+        {% endif %}
+    </body>
+</html>

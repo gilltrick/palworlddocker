@@ -1,0 +1,16 @@
+{
+    "hostname": "0.0.0.0",
+    "website_port": "8221",
+    "website_user": "tester",
+    "website_password": "tester",
+    "config_path": "/home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini",
+    "config_folder_path": "/home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer",
+    "binary_path": "/home/steam/Steam/steamapps/common/PalServer/PalServer.sh",
+    "args": "-useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS > /dev/null",
+    "export_folder_path": "/home/steam/export",
+    "backup_dir": "/home/steam/export/backup",
+    "backup_frequence": 180,
+    "server_name": "dev_pal",
+    "server_update_command":"steamcmd +login anonymous +app_update 2394010 validate +quit",
+    "debug":false
+}

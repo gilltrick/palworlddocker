@@ -1,0 +1,7 @@
+_archive/
+__archive/
+*.pyc
+__pychache__/
+test.py
+*.ini
+tempfolder/

@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Nexa;
+    src: url(./../fonts/Nexa-Heavy.ttf);
+}
+
+
+.home .body{
+    padding:0px;
+    margin:0px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.navbar{
+
+    height: 10%;
+    width: 100%;
+}
+
+
+.loginContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.label{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    color:white;
+}
+
+input{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 40%;
+    height: 15%;
+    color:rgb(37, 36, 36);
+    margin-bottom: 2%;
+    margin-left:30%;
+    margin-right:30%
+}
+
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+form button{
+
+    border: 2px solid rgb(0, 255, 136);
+    border-radius: 3px;
+    background-color: black;
+    color: wheat;
+    font-size: 22px;
+    margin: 0.5%;
+
+    margin-right: 30%;
+    margin-left: 30%;
+    width: 40%;
+    height: 25%;
+    font-family: "Nexa";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center; 
+}
+
+form button:hover{
+
+    border: 2px solid rgb(22, 197, 250);
+    background-color: rgb(46, 168, 184);
+}
+
+@media (max-width:1080px){
+
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eee9e9;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6693d6;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5793ee;
+  }
