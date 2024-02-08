@@ -6,7 +6,9 @@
 
 ### You can also follow this video where I use this repository to setup the application
 
-[![Watch the video](https://github.com/gilltrick/palworlddocker/blob/main/palsp/website/static/image/video_thumb.png?raw=true)](https://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://github.com/gilltrick/palworlddocker/blob/main/palsp/website/static/image/video_thumb.png?raw=true)](https://youtu.be/YNfrqhKPGNc)
+
+
 
 ### If you dont have setup docker engine you need to do this first
 
