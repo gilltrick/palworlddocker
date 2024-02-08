@@ -4,15 +4,16 @@
 }
 
 
-.home .body{
+html body{
     padding:0px;
     margin:0px;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    
+    justify-content:flex-start;
+    align-content: start;
+    background-image: url("./../image/background.png");
+    background-size: cover;
 }
 
 .navbar{
