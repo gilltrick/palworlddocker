@@ -52,6 +52,8 @@ Create the folder to hold the config and world backup. This folder gets bound as
 mkdir -p /opt/palworld/export/backup/Config \
 mkdir /opt/palworld/export/backup/ImGui \
 mkdir /opt/palworld/export/backup/SaveGames \
+mkdir /opt/palworld/export/backup/Crashes \
+mkdir /opt/palworld/export/backup/Logs \
 mkdir /opt/palworld/conf
 ```
 Change permission for the steam user inside the docker container to backup world data
